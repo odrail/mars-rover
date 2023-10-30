@@ -1,0 +1,6 @@
+- swagger
+- test OK
+- validazione ok
+- stato basato su sessione ok
+- logger ok
+- linting
