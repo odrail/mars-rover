@@ -6,7 +6,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import compression from 'compression';
 import initRoute from './routes/init'
-import commandRoute from './routes/command'
+import runRoute from './routes/run'
 import apiDocsRoute from './routes/apiDocs'
 
 const app: Application = express()
@@ -26,7 +26,7 @@ app.use(morgan('combined', { skip: () => process.env.NODE_ENV === 'test' }));
 app.use(compression());
 
 app.use('/init', initRoute)
-app.use('/command', commandRoute)
+app.use('/run', runRoute)
 app.use('/api-docs', apiDocsRoute)
 
 app.use(celebrateErrors())

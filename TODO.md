@@ -1,4 +1,4 @@
-- swagger
+- swagger OK
 - test OK
 - validazione ok
 - stato basato su sessione ok

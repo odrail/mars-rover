@@ -32,10 +32,10 @@ describe("Test POST /init", () => {
   })
 });
 
-describe("Test POST /command", () => {
+describe("Test POST /run", () => {
   test("It should response 403 if no session", async () => {
     const response = await request(app)
-      .post("/command")
+      .post("/run")
     expect(response.statusCode).toBe(403)
   })
 
@@ -60,7 +60,7 @@ describe("Test POST /command", () => {
     const cookieMarsRover = initResponse.headers['set-cookie'].find((c: string) => c.includes('rover-mars'))
 
     const response = await request(app)
-      .post("/command")
+      .post("/run")
       .set('Cookie', cookieMarsRover)
     expect(response.statusCode).toBe(400)
   })
@@ -86,7 +86,7 @@ describe("Test POST /command", () => {
     const cookieMarsRover = initResponse.headers['set-cookie'].find((c: string) => c.includes('rover-mars'))
 
     const response = await request(app)
-      .post("/command")
+      .post("/run")
       .set('Cookie', cookieMarsRover)
       .send({
         commands: ['R']
@@ -115,7 +115,7 @@ describe("Test POST /command", () => {
     const cookieMarsRover = initResponse.headers['set-cookie'].find((c: string) => c.includes('rover-mars'))
 
     const response = await request(app)
-      .post("/command")
+      .post("/run")
       .set('Cookie', cookieMarsRover)
       .send({
         commands: ['R']

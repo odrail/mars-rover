@@ -8,12 +8,16 @@ const swaggerSpec = swaggerJsdoc({
         info: {
             title: 'Mars Rover API',
             version: '1.0.0',
-            description: 'Questa è un\'implementazione del rover sviluppata da Emanuele Liardo per conto di CodicePlastico'
+            description: 'Questa è un\'implementazione di Mars Rover sviluppata da Emanuele Liardo per conto di Codiceplastico'
         },
         tags: [
             {
                 name: 'init',
                 description: 'Tutto ciò che riguarda l\'inizializzazione del tuo rover'
+            },
+            {
+                name: 'run',
+                description: 'Dopo aver inizializzato Marte e il tuo rover, invia i comandi per comandarlo'
             }
         ]
     },
