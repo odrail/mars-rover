@@ -23,6 +23,7 @@ const router = express.Router()
  *                 description: asdf
  *                 items:
  *                   type: string
+ *                   enum: [R, L, F, B]
  *       required: true             
  *     responses:
  *       200:

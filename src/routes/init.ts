@@ -43,6 +43,7 @@ const router = express.Router()
  *                     type: number
  *                   direction:
  *                     type: string
+ *                     enum: [N, E, S, W]
  *       required: true             
  *     responses:
  *       200:
