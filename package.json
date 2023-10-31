@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node ./index.ts",
     "dev": "ts-node-dev --respawn ./index.ts",
-    "test": "jest -c=jest.config.js -i --verbose"
+    "test": "jest -c=jest.config.js -i --verbose --coverage"
   },
   "author": "Emanuele Liardo",
   "license": "ISC",
